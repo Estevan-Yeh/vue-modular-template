@@ -1,8 +1,13 @@
 <template>
   <div>
     {{msg}}{{name}} ~
-    <div>页面路径：{{$route.path}}</div>
-    <div @click="toPage_1">点击跳转到 Page_1</div>
+    <div style="padding:30px">页面路径：{{$route.path}}</div>
+    <div @click="toPage_1">
+      <el-link
+        :underline="false"
+        type="primary"
+      >点击跳转到 Page_1</el-link>
+    </div>
   </div>
 </template>
 

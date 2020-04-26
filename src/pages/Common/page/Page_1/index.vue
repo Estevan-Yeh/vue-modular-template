@@ -1,8 +1,13 @@
 <template>
   <div>
     {{msg}}
-    <div>页面路径：{{$route.path}}</div>
-    <div @click="toBack">点击回退</div>
+    <div style="padding:30px">页面路径：{{$route.path}}</div>
+    <div @click="toBack">
+      <el-link
+        :underline="false"
+        type="primary"
+      >点击回退</el-link>
+    </div>
   </div>
 </template>
 

@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import Nav from './router/nav'
 import store from './store'
+import Element from './element'
 
 Vue.config.productionTip = false
 
 Vue.use(Nav)
+Vue.use(Element)
 
 /* eslint-disable no-new */
 new Vue({
