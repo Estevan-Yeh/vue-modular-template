@@ -2,7 +2,7 @@
   <div>
     {{msg}}
     <div>页面路径：{{$route.path}}</div>
-    <div @click="toPage_1">点击跳转到 Page_1</div>
+    <div @click="toBack">点击回退</div>
   </div>
 </template>
 
@@ -10,12 +10,12 @@
 export default {
   data () {
     return {
-      msg: 'Hello, Estevan ~'
+      msg: 'Hello, Yeh ~'
     }
   },
   methods: {
-    toPage_1 () {
-      this.$nav('Common.Page_1')
+    toBack () {
+      this.$nav('back')
     }
   }
 }

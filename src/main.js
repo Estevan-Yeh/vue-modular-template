@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Nav from './router/nav'
 
 Vue.config.productionTip = false
+
+Vue.use(Nav)
 
 /* eslint-disable no-new */
 new Vue({

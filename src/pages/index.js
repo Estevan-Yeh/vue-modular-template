@@ -10,10 +10,7 @@ ModularList.map(modularName => {
 
   _routerList[modularName] = {}
   for (const pageName in routerItem) {
-    const route = { ...routerItem[pageName] }
-    route.query && delete route.query
-    route.params && delete route.params
-    _routerList[modularName][pageName] = route
+    _routerList[modularName][pageName] = routerItem[pageName]
   }
 })
 

@@ -9,10 +9,14 @@ let _routes = []
 // 各模块页面路由配置
 for (const modularName in routerList) {
   for (const pageName in routerList[modularName]) {
+    const route = { ...routerList[modularName][pageName] }
+    route.query && delete route.query
+    route.params && delete route.params
     _routes.push({
       path: `/${modularName}/${pageName}`,
+      name: `${modularName}.${pageName}`,
       component: () => import(`@/pages/${modularName}/page/${pageName}`),
-      ...routerList[modularName][pageName]
+      ...route
     })
   }
 }
