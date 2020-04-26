@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{msg}}
   </div>
 </template>
 
@@ -7,6 +8,7 @@
 export default {
   data () {
     return {
+      msg: 'Hello, Estevan ~'
     }
   }
 }
