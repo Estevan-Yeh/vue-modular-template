@@ -1,7 +1,8 @@
 export default {
   Home: {
     meta: {
-      title: 'Home'
+      title: 'Home',
+      keepAlive: true
     },
     alias: '/'
   }
