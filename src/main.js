@@ -8,6 +8,7 @@ import store from './store'
 import Element from './element'
 import Request from '@/utils/Request'
 import Storage from '@/utils/Storage'
+import Bus from '@/utils/Bus'
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,7 @@ Vue.use(Nav)
 Vue.use(Element)
 Vue.use(Request)
 Vue.use(Storage)
+Vue.use(Bus)
 
 /* eslint-disable no-new */
 new Vue({
