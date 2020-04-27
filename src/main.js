@@ -7,12 +7,14 @@ import Nav from './router/nav'
 import store from './store'
 import Element from './element'
 import Request from '@/utils/Request'
+import Storage from '@/utils/Storage'
 
 Vue.config.productionTip = false
 
 Vue.use(Nav)
 Vue.use(Element)
 Vue.use(Request)
+Vue.use(Storage)
 
 /* eslint-disable no-new */
 new Vue({
