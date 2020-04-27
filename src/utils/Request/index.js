@@ -190,8 +190,7 @@ export default {
   install: Vue => {
     Vue.prototype.$get = Get
     Vue.prototype.$post = Post
-    Vue.prototype.$getApiUrl = GetApiUrl
-    Vue.prototype.$request = Request
+    Vue.prototype.$uploadFile = UploadFile
     Vue.prototype.$qs = qs
     Vue.prototype.$axios = Axios
   }

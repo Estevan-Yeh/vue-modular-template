@@ -1,5 +1,10 @@
 import { Message, MessageBox, Notification } from 'element-ui'
 
+/**
+ * 以下方法的 others
+ * @param {Object} others - 为 element-ui 对应方法的所有可用参数
+ */
+
 // 消息提示
 export const ShowMessage = (
   message = '消息提示',
