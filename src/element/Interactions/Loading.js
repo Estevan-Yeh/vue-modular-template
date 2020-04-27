@@ -10,7 +10,7 @@ let loadingList = []
  */
 export const ShowLoading = name => {
   if (loadingList.length === 0) {
-    Loading.service({ lock: true })
+    Loading.service()
   }
 
   loadingList.push(name)

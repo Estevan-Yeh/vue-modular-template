@@ -6,11 +6,13 @@ import router from './router'
 import Nav from './router/nav'
 import store from './store'
 import Element from './element'
+import Request from '@/utils/Request'
 
 Vue.config.productionTip = false
 
 Vue.use(Nav)
 Vue.use(Element)
+Vue.use(Request)
 
 /* eslint-disable no-new */
 new Vue({

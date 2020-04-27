@@ -6,7 +6,7 @@ const Nav = (arguments0, arguments1 = '', arguments2 = '') => {
   if (typeof arguments0 === 'object' && arguments0) {
     page = arguments0
   } else if (typeof arguments0 === 'string') {
-    // 如果参数不是 go/back/forward 则为 name/path
+    // 如果参数不是 go/back/forward 则为 name
     switch (arguments0) {
       case 'go':
         Number(arguments1) ? Router.go(Number(arguments1)) : Router.go(0)
