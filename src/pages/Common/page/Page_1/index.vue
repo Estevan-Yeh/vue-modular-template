@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div><img :src="Logo" /></div>
     {{msg}}
     <div style="padding:30px">页面路径：{{$route.path}}</div>
     <div>
@@ -13,11 +14,15 @@
 </template>
 
 <script>
+import Images from '@/utils/Images'
 export default {
   data () {
     return {
       msg: 'Hello, Yeh ~'
     }
+  },
+  computed: {
+    ...Images(['Logo'])
   },
   methods: {
     toBack () {
