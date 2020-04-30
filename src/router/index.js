@@ -12,6 +12,8 @@ for (const modularName in routerList) {
     const route = { ...routerList[modularName][pageName] }
     route.query && delete route.query
     route.params && delete route.params
+    route.openType && delete route.openType
+    route.name && delete route.name
     _routes.push({
       path: `/${modularName}/${pageName}`,
       name: `${modularName}.${pageName}`,

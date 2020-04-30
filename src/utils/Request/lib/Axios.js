@@ -12,11 +12,6 @@ Request.reqList = []
  */
 Request.interceptors.request.use(
   conf => {
-    // 超时处理
-    if (conf.timeout === null) {
-      conf.timeout = Config.timeout
-    }
-
     let reqList = Request.reqList
     let cancel
 

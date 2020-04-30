@@ -63,7 +63,7 @@ export const GetApiUrl = ({ modularInfo, apiInfo } = {}, options = {}) => {
 }
 
 /**
- * 获取 api 信息
+ * 获取超时时间
  */
 export const GetTimeout = ({ modularInfo, apiInfo } = {}, timeout) => {
   return (

@@ -83,11 +83,13 @@ export default {
 
     // query/params 为路由跳转到该页面时的默认 query/params
     // 假如 Nav() 也传了 query/params，则会在此基础上拼接默认值，不会覆盖
-    query: {}
-    params: {}
+    query: {},
+    params: {},
+    // 可选 push/replace, 默认为 push
+    openType: '',
 
-    // 子路由无 query/params，且 path/component/name 无默认值，需要设置 path/component/name
-    children: []
+    // 子路由无 query/params/openType，且 path/component/name 无默认值，需要设置 path/component/name
+    children: [],
 
     meta: {},
     alias: '',
@@ -110,16 +112,16 @@ Nav('go', arguments1) // 即 Router.go(Number(arguments1))，arguments1 默认�
 
 /**
  * 使用 name 跳转
- * @param {String} name - 图片名
+ * @param {String} name - 路由名 `${modularName}.${pageName}`
  * @param {Object} query - 可选
- * @param {String} openType - 可选 push/replace, 默认为 replace
+ * @param {String} openType - 可选 push/replace, 默认为 push
  */
 Nav(name, query, openType)
 
 /**
  * 使用对象跳转(在这里可以使用 path/name 跳转)
  * @param {Object} options - 与 Router({}) 里的对象一致
- * @param {String} openType - 可选 push/replace, 默认为 replace
+ * @param {String} openType - 可选 push/replace, 默认为 push
  */
 Nav(options, openType)
 ```
