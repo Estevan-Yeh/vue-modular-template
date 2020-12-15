@@ -19,7 +19,7 @@ const CheckIgnoreCode = (apiName, res, ignoreCode = []) => {
   const apiIgnore = api[apiName].ignoreCode || []
   const configIgnore = Config.ignoreCode || []
   const _ignoreCode = [...ignoreCode, ...configIgnore, ...apiIgnore]
-  _ignoreCode.indexOf(Number(res.code)) === -1 && ShowMessage(res.msg)
+  _ignoreCode.indexOf(Number(res.code)) > -1 && ShowMessage(res.msg, 'error')
 }
 
 export default (
