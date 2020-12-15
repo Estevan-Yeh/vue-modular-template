@@ -123,7 +123,8 @@ export const Post = (
         })
       })
       .catch(err => {
-        reject(err)
+        RequestFail(err, reject, apiName, loading)
+        // reject(err)
       })
   })
 }
@@ -178,7 +179,8 @@ export const UploadFile = (
           })
         })
         .catch(err => {
-          reject(err)
+          RequestFail(err, reject, apiName, loading)
+          // reject(err)
         })
     } else {
       reject(new Error('no headers'))
